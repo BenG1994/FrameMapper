@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2EDFC05729B7CDB100EB04F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05629B7CDB100EB04F0 /* AppDelegate.swift */; };
 		2EDFC05929B7CDB100EB04F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05829B7CDB100EB04F0 /* SceneDelegate.swift */; };
-		2EDFC05B29B7CDB100EB04F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05A29B7CDB100EB04F0 /* ViewController.swift */; };
+		2EDFC05B29B7CDB100EB04F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05A29B7CDB100EB04F0 /* MapViewController.swift */; };
 		2EDFC05E29B7CDB100EB04F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDFC05C29B7CDB100EB04F0 /* Main.storyboard */; };
 		2EDFC06129B7CDB100EB04F0 /* FrameMapper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05F29B7CDB100EB04F0 /* FrameMapper.xcdatamodeld */; };
 		2EDFC06329B7CDB200EB04F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EDFC06229B7CDB200EB04F0 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		2EDFC05329B7CDB100EB04F0 /* FrameMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDFC05629B7CDB100EB04F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDFC05829B7CDB100EB04F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2EDFC05A29B7CDB100EB04F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EDFC05A29B7CDB100EB04F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2EDFC05D29B7CDB100EB04F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EDFC06029B7CDB100EB04F0 /* FrameMapper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrameMapper.xcdatamodel; sourceTree = "<group>"; };
 		2EDFC06229B7CDB200EB04F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +58,11 @@
 		2EDFC05529B7CDB100EB04F0 /* FrameMapper */ = {
 			isa = PBXGroup;
 			children = (
+				2EDFC06F29B7D10700EB04F0 /* Controllers */,
+				2EDFC06E29B7D10400EB04F0 /* Models */,
+				2EDFC06D29B7D0FD00EB04F0 /* Views */,
 				2EDFC05629B7CDB100EB04F0 /* AppDelegate.swift */,
 				2EDFC05829B7CDB100EB04F0 /* SceneDelegate.swift */,
-				2EDFC05A29B7CDB100EB04F0 /* ViewController.swift */,
 				2EDFC05C29B7CDB100EB04F0 /* Main.storyboard */,
 				2EDFC06229B7CDB200EB04F0 /* Assets.xcassets */,
 				2EDFC06429B7CDB200EB04F0 /* LaunchScreen.storyboard */,
@@ -68,6 +70,28 @@
 				2EDFC05F29B7CDB100EB04F0 /* FrameMapper.xcdatamodeld */,
 			);
 			path = FrameMapper;
+			sourceTree = "<group>";
+		};
+		2EDFC06D29B7D0FD00EB04F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EDFC06E29B7D10400EB04F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2EDFC06F29B7D10700EB04F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2EDFC05A29B7CDB100EB04F0 /* MapViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDFC06129B7CDB100EB04F0 /* FrameMapper.xcdatamodeld in Sources */,
-				2EDFC05B29B7CDB100EB04F0 /* ViewController.swift in Sources */,
+				2EDFC05B29B7CDB100EB04F0 /* MapViewController.swift in Sources */,
 				2EDFC05729B7CDB100EB04F0 /* AppDelegate.swift in Sources */,
 				2EDFC05929B7CDB100EB04F0 /* SceneDelegate.swift in Sources */,
 			);

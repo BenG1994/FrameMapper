@@ -11,15 +11,21 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app requires your location so you can add your photo spots.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app requires your location so you can add your photo spots.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app requires your location so you can add your photo spots.</string>
 </dict>
 </plist>
