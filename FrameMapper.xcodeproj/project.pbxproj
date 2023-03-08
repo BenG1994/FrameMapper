@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1B01AC29B8FC0A00C69446 /* AddPhotoDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B01AB29B8FC0A00C69446 /* AddPhotoDataViewController.swift */; };
+		2E1B01AF29B91FF000C69446 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1B01AE29B91FF000C69446 /* IQKeyboardManagerSwift */; };
+		2E1B01B129B9297F00C69446 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B01B029B9297F00C69446 /* DroppablePin.swift */; };
 		2EDFC05729B7CDB100EB04F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05629B7CDB100EB04F0 /* AppDelegate.swift */; };
 		2EDFC05929B7CDB100EB04F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05829B7CDB100EB04F0 /* SceneDelegate.swift */; };
 		2EDFC05B29B7CDB100EB04F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFC05A29B7CDB100EB04F0 /* MapViewController.swift */; };
@@ -17,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1B01AB29B8FC0A00C69446 /* AddPhotoDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoDataViewController.swift; sourceTree = "<group>"; };
+		2E1B01B029B9297F00C69446 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		2EDFC05329B7CDB100EB04F0 /* FrameMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDFC05629B7CDB100EB04F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDFC05829B7CDB100EB04F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1B01AF29B91FF000C69446 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,7 @@
 		2EDFC06D29B7D0FD00EB04F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E1B01B029B9297F00C69446 /* DroppablePin.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				2EDFC05A29B7CDB100EB04F0 /* MapViewController.swift */,
+				2E1B01AB29B8FC0A00C69446 /* AddPhotoDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +118,9 @@
 			dependencies = (
 			);
 			name = FrameMapper;
+			packageProductDependencies = (
+				2E1B01AE29B91FF000C69446 /* IQKeyboardManagerSwift */,
+			);
 			productName = FrameMapper;
 			productReference = 2EDFC05329B7CDB100EB04F0 /* FrameMapper.app */;
 			productType = "com.apple.product-type.application";
@@ -138,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 2EDFC04A29B7CDB100EB04F0;
+			packageReferences = (
+				2E1B01AD29B91FF000C69446 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 2EDFC05429B7CDB100EB04F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDFC06129B7CDB100EB04F0 /* FrameMapper.xcdatamodeld in Sources */,
+				2E1B01B129B9297F00C69446 /* DroppablePin.swift in Sources */,
 				2EDFC05B29B7CDB100EB04F0 /* MapViewController.swift in Sources */,
+				2E1B01AC29B8FC0A00C69446 /* AddPhotoDataViewController.swift in Sources */,
 				2EDFC05729B7CDB100EB04F0 /* AppDelegate.swift in Sources */,
 				2EDFC05929B7CDB100EB04F0 /* SceneDelegate.swift in Sources */,
 			);
@@ -318,16 +334,19 @@
 				DEVELOPMENT_TEAM = 4224Q87F2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FrameMapper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Frame Mapper";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location so you can add your photo spots.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires your location so you can add your photo spots.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location so you can add your photo spots.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bengauger.FrameMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -346,16 +365,19 @@
 				DEVELOPMENT_TEAM = 4224Q87F2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FrameMapper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Frame Mapper";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location so you can add your photo spots.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires your location so you can add your photo spots.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location so you can add your photo spots.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bengauger.FrameMapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -386,6 +408,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E1B01AD29B91FF000C69446 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E1B01AE29B91FF000C69446 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E1B01AD29B91FF000C69446 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2EDFC05F29B7CDB100EB04F0 /* FrameMapper.xcdatamodeld */ = {

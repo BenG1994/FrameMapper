@@ -9,6 +9,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
+//protocol placePin {
+//    
+//    func dropPin()
+//    
+//}
+
 
 class MapViewController: UIViewController {
     
@@ -24,6 +30,10 @@ class MapViewController: UIViewController {
     let authorizationStatus = CLLocationManager.authorizationStatus()
     let regionRadius: Double = 1000
     
+    var textField = UITextField()
+//    var placedPins: [Pins] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +45,14 @@ class MapViewController: UIViewController {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        textField.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mapView.delegate = self
+        locationManager.delegate = self
+        
+//        have for loop to load each of the photo data things and have a pin show up each time?
     }
     
     
@@ -52,7 +70,8 @@ class MapViewController: UIViewController {
         
     }
     
-    @IBAction func addPhotoDataPressed(_ sender: Any) {
+    @IBAction func testButtonPressed(_ sender: Any) {
+        dropPin()
     }
     
     @IBAction func clearPhotosPressed(_ sender: Any) {
@@ -61,10 +80,17 @@ class MapViewController: UIViewController {
     
     @IBAction func locationButtonPressed(_ sender: Any) {
         mapView.setCenter(mapView.userLocation.coordinate, animated: true)
-        print("button works")
+        centerMapOnUserLocation()
         
     }
     
+    @IBAction func addPhotoDataPressed(_ sender: Any) {
+        dropPin()
+        guard let infoVC = storyboard?.instantiateViewController(withIdentifier: "AddPhotoDataViewController") as? AddPhotoDataViewController else {return}
+        infoVC.modalPresentationStyle = .overCurrentContext
+        present(infoVC, animated: true)
+//        dropPin()
+    }
     
 }
 
@@ -73,6 +99,16 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate{
     
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }else {
+            let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
+            pinAnnotation.pinTintColor = UIColor.orange
+            pinAnnotation.animatesDrop = true
+            return pinAnnotation
+        }
+    }
     
     
     func centerMapOnUserLocation() {
@@ -80,11 +116,44 @@ extension MapViewController: MKMapViewDelegate{
         let coordinateRegion = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: regionRadius * 2, longitudinalMeters: regionRadius * 2)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    
+    @objc func dropPin() {
+        
+        
+        let currentLocation = CLLocationCoordinate2D(latitude: self.mapView.userLocation.coordinate.latitude, longitude: self.mapView.userLocation.coordinate.longitude)
+        
+        
+        print(currentLocation)
+        let annotation = DroppablePin(coordinate: currentLocation, identifier: "droppablePin")
+        mapView.addAnnotation(annotation)
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 //MARK: - Location Delegate
 
 extension MapViewController: CLLocationManagerDelegate{
+    
     func configureLocationServices() {
         if authorizationStatus == .notDetermined {
             locationManager.requestAlwaysAuthorization()
@@ -96,4 +165,14 @@ extension MapViewController: CLLocationManagerDelegate{
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         centerMapOnUserLocation()
     }
+}
+
+extension MapViewController: UITextFieldDelegate {
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    
 }
